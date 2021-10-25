@@ -4,9 +4,9 @@ package org.launchcode.techjobs.oo;
 import java.util.Objects;
 
 public class Job {
-
     private int id;
     private static int nextId = 1;
+
 
     private String name;
     private Employer employer;
@@ -56,8 +56,9 @@ public class Job {
         return name;
     }
 
-    public void setName(String name) {
+    public String setName(String name) {
         this.name = name;
+        return name;
     }
 
     public Employer getEmployer() {
@@ -95,4 +96,32 @@ public class Job {
     public int getId() {
         return id;
     }
+
+    @Override
+    public String toString() {
+        String returnThis =  "\n" + "ID: " + id;
+        if (this.name.equals("")) {
+            returnThis += '\n' + "Name: " + "Data not available";
+        } else {
+            returnThis += '\n' + "Name: " + name;
+        } if (this.employer.getValue().equals("")) {
+            returnThis += '\n' + "Employer: " + "Data not available";
+        } else {
+            returnThis += '\n' + "Employer: " + employer;
+        } if (this.location.getValue().equals("")) {
+            returnThis += '\n' + "Location: " + "Data not available";
+        } else {
+            returnThis += '\n' + "Location: " + location;
+        } if (this.positionType.getValue().equals("")) {
+            returnThis += '\n' + "Position Type: " + "Data not available";
+        } else {
+            returnThis += '\n' + "Position Type: " + positionType;
+        } if (this.coreCompetency.getValue().equals("")) {
+            returnThis += '\n' + "Core Competency: " + "Data not available";
+        } else {
+            returnThis += '\n' + "Core Competency: " + coreCompetency;
+        }
+            return  returnThis + '\n';
+        }
+
 }

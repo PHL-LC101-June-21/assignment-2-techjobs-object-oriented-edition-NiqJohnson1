@@ -81,7 +81,7 @@ public class JobTest {
         Job newJob3 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         String [] actual = newJob3.toString().split("\n");
 
-        Assert.assertEquals("ID: 1", actual[1]);
+        Assert.assertEquals("ID: 4", actual[1]);
         Assert.assertEquals("Name: Product tester", actual[2]);
         Assert.assertEquals("Employer: ACME", actual[3]);
         Assert.assertEquals("Location: Desert", actual[4]);

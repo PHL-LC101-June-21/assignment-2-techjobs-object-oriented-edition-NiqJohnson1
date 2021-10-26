@@ -1,6 +1,4 @@
-package org.launchcode.techjobs.oo.test;
-
-import org.launchcode.techjobs.oo.Job;
+package org.launchcode.techjobs.oo;
 
 import java.util.Objects;
 
@@ -19,7 +17,7 @@ public abstract class JobField {
         this.value = value;
     }
 
-    @Override
+
     public String toString() {
         return this.value;
     }
